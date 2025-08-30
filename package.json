@@ -1,0 +1,80 @@
+{
+	"name": "@pouchlab/emitter",
+	"description": "A blazing fast eventemitter for all js runtimes ",
+	"version": "1.0.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"module": "./dist/index.js",
+	"main": "./dist/index.cjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		}
+	},
+	"scripts": {
+		"build": "bunup",
+		"dev": "bunup --watch",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format .",
+		"format:fix": "biome format --write",
+		"tsc": "tsc --noEmit",
+		"test": "bun test",
+		"test:watch": "bun test --watch",
+		"test:coverage": "bun test --coverage",
+		"release": "bumpp --commit --push --tag",
+		"prepare": "simple-git-hooks",
+		"demo": "bun run --watch src/demo.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.2",
+		"@types/bun": "^1.2.21",
+		"bumpp": "^10.2.3",
+		"bunup": "^0.11.22",
+		"simple-git-hooks": "^2.13.1",
+		"typescript": "^5.9.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pouchlabs/pemitter.git"
+	},
+	"peerDependencies": {
+		"typescript": ">=4.5.0"
+	},
+	"peerDependenciesMeta": {
+		"typescript": {
+			"optional": true
+		}
+	},
+	"simple-git-hooks": {
+		"pre-commit": "bun run lint:fix && git add ."
+	},
+	"homepage": "https://github.com/pouchlabs/pemitter#readme",
+	"bugs": {
+		"url": "https://github.com/pouchlabs/pemitter/issues"
+	},
+	"license": "MIT",
+	"keywords": [
+		"eventemitter",
+		"eventemitter3",
+		"pemitter",
+		"Events",
+		"nodejs",
+		"bunjs"	,
+		"browser",
+		"pub",
+		"sub",
+		"deno"
+	]
+	
+}
