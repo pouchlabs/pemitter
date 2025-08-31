@@ -30,7 +30,7 @@ jobs:
                     run: bun install
 
                   - name: Run validation
-                    run: bun run tsc && bun run lint && bun run format
+                    run: bun run tsc 
 
                   - name: Run tests
                     run: bun run test

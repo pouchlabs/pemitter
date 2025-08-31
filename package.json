@@ -1,7 +1,7 @@
 {
 	"name": "@pouchlab/emitter",
 	"description": "A blazing fast eventemitter for all js runtimes ",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"type": "module",
 	"files": [
 		"dist"
@@ -64,17 +64,19 @@
 		"url": "https://github.com/pouchlabs/pemitter/issues"
 	},
 	"license": "MIT",
+	"author": {
+		"name": "pouchlabs"
+	},
 	"keywords": [
 		"eventemitter",
 		"eventemitter3",
 		"pemitter",
 		"Events",
 		"nodejs",
-		"bunjs"	,
+		"bunjs",
 		"browser",
 		"pub",
 		"sub",
 		"deno"
 	]
-	
 }

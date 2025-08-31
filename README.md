@@ -21,9 +21,9 @@ em.once("chat",function cb(ev){
     console.log("once",ev.data.get("h")())
 })
 //turns off listeners  for current event
-em.off("*") 
+em.off("*") //alias removeListener
 //listener
-em.on("chat",(ev)=>{ 
+em.on("chat",(ev)=>{ //alias addListener
  console.log("off",ev)
 })
 em.on("chat",(ev)=>{

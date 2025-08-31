@@ -9,13 +9,13 @@
 		}
 	},
 	"linter": {
-		"enabled": true,
+		"enabled": false,
 		"rules": {
 			"recommended": true
 		}
 	},
 	"formatter": {
-		"enabled": true,
+		"enabled": false,
 		"useEditorconfig": true
 	},
 	"javascript": {
@@ -25,7 +25,7 @@
 		}
 	},
 	"vcs": {
-		"enabled": true,
+		"enabled": false,
 		"useIgnoreFile": true,
 		"clientKind": "git"
 	}

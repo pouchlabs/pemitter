@@ -1,23 +1,27 @@
-import Pemitter from "./index";
+import Pemitter from './index'
 
 const em = new Pemitter()
 
-
-// em.once("chat",function cb(ev){
-//     console.log("once",ev.data.get("h")())
-// })
-em.off("*") 
-em.on("chat",(ev)=>{ 
- console.log("off",ev)
+em.addListener('chat', function cb(ev) {
+	console.log('onceb', ev.data.get('h')())
 })
-em.on("chat",(ev)=>{
-    console.log("w",ev)
+em.once('chat', function cb(ev) {
+	console.log('once2', ev.data.get('h')())
 })
-em.on("*",(ev)=>{
-    console.log("w2h",ev)
-}) 
+em.removeListener('*')
+em.on('chat', (ev) => {
+	console.log('off', ev)
+})
+em.on('chat', (ev) => {
+	console.log('w', ev)
+})
+em.on('*', (ev) => {
+	console.log('w2h', ev)
+})
 
-
-em.emit("chat",new Map().set("h",()=>{console.log("bb")}))   
-
-
+em.emit(
+	'chat',
+	new Map().set('h', () => {
+		console.log('bb')
+	}),
+)
